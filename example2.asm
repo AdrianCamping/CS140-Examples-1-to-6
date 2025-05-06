@@ -3,8 +3,8 @@
     valf: .word 0
     valg: .word 20
     valh: .word 30
-    vali: .word 
-    valj: .word 
+    vali: .word 10
+    valj: .word 20
 ############################ Code segment ############################
 .text
 .globl main
@@ -18,7 +18,7 @@ main:
     lw $t4, valj
 
     slt $t5, $t3, $t4
-    bne $t5, $zero, false
+    beq $t5, $zero, false
     add $t0, $t1, $t2
     j exit
 false:
